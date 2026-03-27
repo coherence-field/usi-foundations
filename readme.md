@@ -2,7 +2,7 @@
 
 The Universal Symbolic Interface (USI) is a structural architecture for symbolic cognition. It is built on the Coherence Operating Protocol (COP), which defines the substrate for symbolic operators, invariants, and state transitions. Together, COP and USI establish the symbolic manifold, the generative layer, cross‑architecture synthesis, and the integration layer.
 
-This repository hosts the foundational sequence of the discipline, including papers, diagrams, and specifications. The refinement process follows a center‑outward sequence to preserve generative coherence, while the published numbering remains canonical for readers.
+This repository hosts the foundational sequence of the discipline, including papers, diagrams, and specifications.
 
 ## Foundational Papers (Canonical Numbering)
 
