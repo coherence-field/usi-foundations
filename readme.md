@@ -6,17 +6,17 @@ This repository hosts the foundational sequence of the discipline, including pap
 
 ## Foundational Papers
 
-1. **The Coherence Operating Protocol (COP)**  
-   Substrate for symbolic operators, invariants, and state transitions.
+1. **The USI Generative Architecture**  
+   The generative layer that constructs symbolic structures from primitives.
 
 2. **The Universal Symbolic Interface (USI)**  
    The symbolic manifold and interface layer built on COP.
 
-3. **The USI Generative Architecture**  
-   The generative layer that constructs symbolic structures from primitives.
+3. **Cross‑Architecture Generative Synthesis (CAGS)**  
+   The synthesis layer enabling symbolic interoperability across architectures
 
-4. **Cross‑Architecture Generative Synthesis (CAGS)**  
-   The synthesis layer enabling symbolic interoperability across architectures.
+4. **The Coherence Operating Protocol (COP)**  
+   Substrate for symbolic operators, invariants, and state transitions.
 
 5. **The USI Integration Layer**  
    The integration layer that stabilizes symbolic structures across systems.
