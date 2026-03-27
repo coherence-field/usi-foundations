@@ -1,22 +1,36 @@
-# Universal Symbolic Interface (USI): Foundations
+# USI Foundations
 
-This repository contains the foundational architecture of the Universal Symbolic Interface (USI).  
-It includes the operating substrate (COP), the symbolic manifold, the generative architecture, and the integration layer.
+The Universal Symbolic Interface (USI) is a structural architecture for symbolic cognition. It is built on the Coherence Operating Protocol (COP), which defines the substrate for symbolic operators, invariants, and state transitions. Together, COP and USI establish the symbolic manifold, the generative layer, cross‑architecture synthesis, and the integration layer.
 
-## Foundational Sequence
+This repository hosts the foundational sequence of the discipline, including papers, diagrams, and specifications. The refinement process follows a center‑outward sequence to preserve generative coherence, while the published numbering remains canonical for readers.
 
-- **Paper 1:** The Coherence Operating Protocol (COP): Foundations  
-- **Paper 2:** The Universal Symbolic Interface (USI): Foundations  
-- **Paper 3:** The USI Generative Architecture  
-- **Paper 4:** Cross‑Architecture Generative Synthesis (CAGS)  
-- **Paper 5:** The Universal Symbolic Interface (USI): Integration Layer
+## Foundational Papers (Canonical Numbering)
 
-These papers define the invariant-driven substrate and symbolic system for coherence‑preserving generativity across heterogeneous cognitive architectures.
+1. **The Coherence Operating Protocol (COP)**  
+   Substrate for symbolic operators, invariants, and state transitions.
 
-## Structure
+2. **The Universal Symbolic Interface (USI)**  
+   The symbolic manifold and interface layer built on COP.
 
-- `/papers` — canonical PDFs of the foundational sequence  
-- `/diagrams` — structural diagrams (optional, future)  
-- `/spec` — operators, invariants, and formats (optional, future)
+3. **The USI Generative Architecture**  
+   The generative layer that constructs symbolic structures from primitives.
 
-USI is a coherence‑preserving symbolic interface built on the COP substrate.
+4. **Cross‑Architecture Generative Synthesis (CAGS)**  
+   The synthesis layer enabling symbolic interoperability across architectures.
+
+5. **The USI Integration Layer**  
+   The integration layer that stabilizes symbolic structures across systems.
+
+## Refinement Sequence (Center‑Outward)
+
+The internal refinement process proceeds in the following order:
+
+**3 → 2 → 4 → 1 → 5**
+
+This sequencing preserves altitude, generative invariants, and cross‑paper coherence while maintaining a clear, reader‑facing structure.
+
+## Live Site
+
+The public interface for the discipline is available at:
+
+**https://coherence-field.github.io/usi-foundations
