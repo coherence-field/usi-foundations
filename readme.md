@@ -21,14 +21,6 @@ This repository hosts the foundational sequence of the discipline, including pap
 5. **The USI Integration Layer**  
    The integration layer that stabilizes symbolic structures across systems.
 
-## Refinement Sequence (Center‑Outward)
-
-The internal refinement process proceeds in the following order:
-
-**3 → 2 → 4 → 1 → 5**
-
-This sequencing preserves altitude, generative invariants, and cross‑paper coherence while maintaining a clear, reader‑facing structure.
-
 ## Live Site
 
 The public interface for the discipline is available at:
