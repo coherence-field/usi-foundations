@@ -4,7 +4,7 @@ The Universal Symbolic Interface (USI) is a structural architecture for symbolic
 
 This repository hosts the foundational sequence of the discipline, including papers, diagrams, and specifications.
 
-## Foundational Papers (Canonical Numbering)
+## Foundational Papers
 
 1. **The Coherence Operating Protocol (COP)**  
    Substrate for symbolic operators, invariants, and state transitions.
