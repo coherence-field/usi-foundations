@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Generative Architecture Reference Diagrams (GARD)</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  pre {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .diagram-block {
+    margin-bottom: 60px;
+  }
+  .desc {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Generative Architecture Reference Diagrams (GARD)</h1>
+
+<p>
+This page provides optional reference diagrams for readers studying the Universal Symbolic Interface (USI) Generative Architecture. 
+The foundational papers are fully self‑contained in text form, but certain structures benefit from visual representation. 
+These diagrams correspond to key sections of <strong>Paper 3 — The USI Generative Architecture</strong> and are provided as optional interpretive aids.
+</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 1. SYMBOLIC MANIFOLD -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>1. Symbolic Manifold</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 3, Section 2 — Generative Preconditions</strong><br>
+Purpose: Visualizes the manifold as interacting regions of Units, Binding, and Resolution, converging into Generative Trajectories.
+</p>
+
+<pre>
+                 +---------------------------+
+                 |     SYMBOLIC MANIFOLD     |
+                 +---------------------------+
+                           /     |     \
+                          /      |      \
+                +--------+   +--------+   +--------+
+                | Units  |   | Binding|   |Resolution|
+                +--------+   +--------+   +--------+
+                          \      |      /
+                           \     |     /
+                 +---------------------------+
+                 |   Generative Trajectories |
+                 +---------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 2. GENERATIVE COMPOSITION FLOW -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>2. Generative Composition Flow</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 3, Section 8 — Generative Composition</strong><br>
+Purpose: Shows how symbolic objects move horizontally (Primitive → Structured → Relational → Generative → Meta) and how operators drive transitions.
+</p>
+
+<pre>
++-----------+     G1      +-------------+     G2      +-------------+
+| Primitive | --------->  | Structured  | --------->  | Relational  |
++-----------+             +-------------+             +-------------+
+                               |   ^                        |   ^
+                               |   |                        |   |
+                               v   |                        v   |
+                           G3 / G5 |                    G4 / G6 |
+                               |   |                        |   |
+                         +-------------+               +-------------+
+                         | Generative  | <-----------  |   Meta      |
+                         +-------------+       G7      +-------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 3. COLLAPSE → REFRAME → STABILIZE -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>3. Collapse → Reframe → Stabilize Sequence</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 3, Section 12 — Generative Collapse Modes</strong><br>
+Purpose: Clarifies the recovery loop that restores coherence after drift or collapse.
+</p>
+
+<pre>
++------------------+
+|   Drift Detected |
++------------------+
+          |
+          v
++------------------+
+|   Collapse Mode  |
++------------------+
+          |
+          v
++------------------+
+|     Reframe      |
++------------------+
+          |
+          v
++------------------+
+|    Stabilize     |
++------------------+
+          |
+          v
++------------------------+
+|   Resume Trajectory    |
++------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 4. RESOLUTION–OPERATOR TRANSITION MATRIX -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>4. Resolution–Operator Transition Matrix</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 3, Section 6 — Generative Invariants</strong><br>
+Purpose: Maps which generative operators (G1–G6) enable transitions between resolution layers L1–L5. 
+This is the only multi‑dimensional mapping in the architecture.
+</p>
+
+<pre>
++-------------------+---------------------------------------+
+|   From \ To       |   L1   |   L2   |   L3   |   L4   | L5|
++-------------------+---------------------------------------+
+| L1: Primitive     |   —    |  G1    |   —    |   —    | — |
+| L2: Structural    |  G3    |   —    |  G1    |  G2    | — |
+| L3: Relational    |  G3    |  G3    |   —    |  G2    | G4|
+| L4: Generative    |  G5    |  G5    |  G5    |   —    | G4|
+| L5: Meta          |  G6    |  G6    |  G6    |  G6    | — |
++-----------------------------------------------------------+
+
+Legend:
+G1 = Bind
+G2 = Lift
+G3 = Compress
+G4 = Expand
+G5 = Constrain
+G6 = Reframe
+</pre>
+</div>
+
+<hr>
+
+<footer>
+<p style="font-size: 0.9rem; color: #666;">
+GARD — Generative Architecture Reference Diagrams<br>
+Part of the Universal Symbolic Interface (USI) Foundations Repository.
+</p>
+</footer>
+
+</body>
+</html>
 
