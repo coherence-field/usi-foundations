@@ -4,25 +4,33 @@ The Universal Symbolic Interface (USI) is a structural architecture for symbolic
 
 This repository hosts the foundational sequence of the discipline, including papers, diagrams, and specifications.
 
-## Foundational Papers
+## Foundational Papers (Canonical Numbering)
 
-1. **The USI Generative Architecture**  
-   The generative layer that constructs symbolic structures from primitives.
+1. **The Coherence Operating Protocol (COP)**  
+   Substrate for symbolic operators, invariants, and state transitions.
 
 2. **The Universal Symbolic Interface (USI)**  
    The symbolic manifold and interface layer built on COP.
 
-3. **Cross‑Architecture Generative Synthesis (CAGS)**  
-   The synthesis layer enabling symbolic interoperability across architectures
+3. **The USI Generative Architecture**  
+   The generative layer that constructs symbolic structures from primitives.
 
-4. **The Coherence Operating Protocol (COP)**  
-   Substrate for symbolic operators, invariants, and state transitions.
+4. **Cross‑Architecture Generative Synthesis (CAGS)**  
+   The synthesis layer enabling symbolic interoperability across architectures.
 
 5. **The USI Integration Layer**  
    The integration layer that stabilizes symbolic structures across systems.
+
+## Presentation Order (Center‑Outward)
+
+The papers are presented on the website in the following order to reflect the generative geometry of the architecture:
+
+**3 → 2 → 4 → 1 → 5**
+
+This preserves generative coherence while maintaining a clear conceptual numbering for readers.
 
 ## Live Site
 
 The public interface for the discipline is available at:
 
-**https://coherence-field.github.io/usi-foundations
+**https://coherence-field.github.io/usi-foundations**
