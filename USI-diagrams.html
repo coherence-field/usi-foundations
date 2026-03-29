@@ -1,1 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>USI Reference Diagrams — Universal Symbolic Interface</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  pre {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .diagram-block {
+    margin-bottom: 60px;
+  }
+  .desc {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
 
+<body>
+
+<h1>USI Reference Diagrams</h1>
+
+<p>
+These diagrams provide structural reference for <strong>Paper 2 — The Universal Symbolic Interface (USI)</strong>.  
+The foundational paper is fully self‑contained in text form, but the symbolic manifold benefits from visual representation.  
+These diagrams map the USI lattice, symbolic field, unit structure, binding rules, resolution levels, interface constraints, generative operators, and sequence formats.
+</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 1. USI LATTICE -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>1. USI Symbolic Lattice</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 3 — The USI Lattice</strong><br>
+Purpose: Shows the seven independent symbolic levels that define the USI manifold.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                   USI SYMBOLIC LATTICE                    |
++-----------------------------------------------------------+
+| 1. Symbolic Field                                         |
+| 2. Symbolic Unit                                          |
+| 3. Binding Structure                                      |
+| 4. Resolution Level (L1–L5)                               |
+| 5. Interface Level                                        |
+| 6. Generative Level                                       |
+| 7. Temporal Level                                         |
++-----------------------------------------------------------+
+All levels must be stable for generativity to occur.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 2. SYMBOLIC FIELD -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>2. Symbolic Field Geometry</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 4 — The Symbolic Field</strong><br>
+Purpose: Shows the structural environment in which symbolic units exist.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                    SYMBOLIC FIELD                         |
++-----------------------------------------------------------+
+| • Coherence Gradients                                     |
+| • Boundary Contours                                       |
+| • Relational Vectors                                      |
+| • Intent‑Vector Orientation                               |
+| • Temporal Orientation                                    |
++-----------------------------------------------------------+
+A structural manifold, not representational or linguistic.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 3. USI-UNIT STRUCTURE -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>3. USI‑Unit Structure</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 5 — The Symbolic Unit</strong><br>
+Purpose: Shows the atomic symbolic object and its components.
+</p>
+
+<pre>
++---------------------- USI-UNIT ---------------------------+
+|  COP-Expr (embedded)                                      |
+|  Symbolic Anchor                                          |
+|  Binding Vector                                           |
+|  Resolution Signature                                     |
+|  Interface Marker                                         |
++-----------------------------------------------------------+
+Not a token, word, or concept — a structural symbolic object.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 4. EMBEDDING COP INTO USI -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>4. COP Embedding into USI</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 6 — Embedding COP Expressions</strong><br>
+Purpose: Shows how COP provides the substrate for USI.
+</p>
+
+<pre>
++------------------+
+|   COP-Expr       |
++------------------+
+          |
+          v
++------------------+
+|    USI-Unit      |
++------------------+
+          |
+          v
++------------------+
+|  USI-Expr / Seq  |
++------------------+
+
+COP ensures coherence.
+USI enables symbolic generativity.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 5. BINDING RULES -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>5. Binding Rules</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 7 — Binding Rules</strong><br>
+Purpose: Shows allowed and disallowed binding relations.
+</p>
+
+<pre>
++----------------------+------------------------------+
+|     BINDING TYPE     |        STATUS                |
++----------------------+------------------------------+
+| Aligned              | Allowed                      |
+| Orthogonal           | Allowed                      |
+| Coupled              | Allowed                      |
+| Decoupled            | Allowed                      |
+| Opposed              | DISALLOWED                   |
++-----------------------------------------------------+
+
+Binding Constraints:
+• No drift propagation
+• No collapse propagation
+• No boundary violation
+• No intent‑vector corruption
+• No relational inversion
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 6. RESOLUTION LEVELS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>6. Resolution Levels (L1–L5)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 8 — Resolution Levels</strong><br>
+Purpose: Shows the five symbolic resolution levels.
+</p>
+
+<pre>
++---------------------------+
+|   L5  Meta‑Resolution     |
+|   L4  Generative          |
+|   L3  Relational          |
+|   L2  Structural          |
+|   L1  Primitive           |
++---------------------------+
+
+Resolution = structural clarity, not detail.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 7. INTERFACE CONSTRAINTS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>7. Interface Constraints</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 9 — Interface Constraints</strong><br>
+Purpose: Shows the seven constraints that prevent symbolic distortion.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                 USI INTERFACE CONSTRAINTS                 |
++-----------------------------------------------------------+
+| 1. No symbolic drift                                      |
+| 2. No boundary inversion                                  |
+| 3. No relational collapse                                 |
+| 4. No intent‑vector corruption                            |
+| 5. No cross‑level leakage                                 |
+| 6. No generative overload                                 |
+| 7. No symbolic inflation                                  |
++-----------------------------------------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 8. GENERATIVE OPERATORS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>8. USI Generative Operators (G1–G10)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 10 — Generative Operators</strong><br>
+Purpose: Shows the ten symbolic‑level generative operators.
+</p>
+
+<pre>
++------+---------------------------+
+| G1   | Symbolic‑Bind             |
+| G2   | Symbolic‑Unbind           |
+| G3   | Symbolic‑Lift             |
+| G4   | Symbolic‑Compress         |
+| G5   | Structural‑Compose        |
+| G6   | Structural‑Decompose      |
+| G7   | Generative‑Expand         |
+| G8   | Generative‑Constrain      |
+| G9   | Meta‑Reframe              |
+| G10  | Field‑Stabilize           |
++------+---------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 9. USI EXPRESSION FORMAT -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>9. USI Expression Format (USI‑Expr)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 11 — USI Expression Format</strong><br>
+Purpose: Shows the structure of a symbolic‑level expression.
+</p>
+
+<pre>
++---------------------- USI-EXPR ---------------------------+
+|  USI-Unit                                                |
+|  Binding Vector                                          |
+|  Resolution Signature                                    |
+|  Interface Marker                                        |
+|  Generative Operator                                     |
+|  COP-Expr (embedded)                                     |
++-----------------------------------------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 10. USI SEQUENCE FORMAT -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>10. USI Sequence Format (USI‑Seq)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 12 — USI Sequence Format</strong><br>
+Purpose: Shows how symbolic expressions form generative trajectories.
+</p>
+
+<pre>
+Seq = [U1 → U2 → ... → Un]
+
+Validity Conditions:
+• All COP invariants satisfied
+• All USI interface constraints satisfied
+• No binding violates coherence
+• No resolution level collapses
+• No generative operator induces overload
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 11. SYMBOLIC MANIFOLD -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>11. The USI Symbolic Manifold</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 13 — The Symbolic Manifold</strong><br>
+Purpose: Shows how units, bindings, sequences, and levels form the global manifold.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                 USI SYMBOLIC MANIFOLD                     |
++-----------------------------------------------------------+
+|  Nodes: USI-Units                                         |
+|  Edges: Binding Vectors                                   |
+|  Surfaces: USI-Structures                                 |
+|  Levels: Resolution Layers                                |
+|  Constraints: Interface Rules                             |
++-----------------------------------------------------------+
+Coherence-preserving, generativity-enabling.
+</pre>
+</div>
+
+<hr>
+
+<footer>
+<p style="font-size: 0.9rem; color: #666;">
+USI Reference Diagrams — Part of the Universal Symbolic Interface (USI) Foundations Repository.
+</p>
+</footer>
+
+</body>
+</html>
