@@ -41,7 +41,22 @@
             margin-bottom: 20px;
             letter-spacing: 0.5px;
         }
-        a {
+        .link-group {
+            margin-bottom: 20px;
+        }
+        .inline-links a {
+            display: inline-block;
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 6px 10px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 2px;
+        }
+        .inline-links a:hover {
+            border-bottom-color: #ffffff;
+        }
+        a.block-link {
             display: block;
             font-size: 22px;
             color: #ffffff;
@@ -53,7 +68,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        a:hover {
+        a.block-link:hover {
             border-bottom-color: #ffffff;
         }
     </style>
@@ -68,20 +83,35 @@
 
         <!-- Orientation Layer -->
         <div class="section-title">Orientation</div>
-        <a href="interpretive-orientation.html">Interpretive Orientation Layer →</a>
+        <a class="block-link" href="interpretive-orientation.html">Interpretive Orientation Layer →</a>
 
         <!-- Papers -->
         <div class="section-title">Foundational Papers</div>
-        <a href="papers.html">Papers →</a>
+        <a class="block-link" href="papers.html">Papers →</a>
 
-        <!-- Reference Materials -->
-        <div class="section-title">Reference Materials</div>
-        <a href="GARD.html">Reference Diagrams →</a>
-        <a href="COP-sequences.html">Reference Sequences →</a>
+        <!-- Reference Diagrams -->
+        <div class="section-title">Reference Diagrams</div>
+        <div class="inline-links link-group">
+            <a href="COP-diagrams.html">COP</a>
+            <a href="USI-diagrams.html">USI</a>
+            <a href="GARD.html">Generative</a>
+            <a href="CAGS-diagrams.html">CAGS</a>
+            <a href="Integration-diagrams.html">Integration</a>
+        </div>
+
+        <!-- Reference Sequences -->
+        <div class="section-title">Reference Sequences</div>
+        <div class="inline-links link-group">
+            <a href="COP-sequences.html">COP</a>
+            <a href="USI-sequences.html">USI</a>
+            <a href="Generative-sequences.html">Generative</a>
+            <a href="CAGS-sequences.html">CAGS</a>
+            <a href="Integration-sequences.html">Integration</a>
+        </div>
 
         <!-- About -->
         <div class="section-title">About</div>
-        <a href="about.html">About the Project →</a>
+        <a class="block-link" href="about.html">About the Project →</a>
     </div>
 </body>
 </html>
