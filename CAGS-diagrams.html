@@ -1,1 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CAGS Reference Diagrams — Cross‑Architecture Generative Synthesis</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  pre {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .diagram-block {
+    margin-bottom: 60px;
+  }
+  .desc {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
 
+<body>
+
+<h1>CAGS Reference Diagrams</h1>
+
+<p>
+These diagrams provide structural reference for <strong>Paper 4 — Cross‑Architecture Generative Synthesis (CAGS)</strong>.  
+The foundational paper is fully self‑contained in text form, but cross‑architecture synthesis benefits from visual representation.  
+These diagrams map the synthesis preconditions, CAP/CAS/CAF hierarchy, operator dynamics, invariants, binding patterns, trajectories, and manifold topology.
+</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 1. SYNTHESIS PRECONDITIONS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>1. Preconditions for Cross‑Architecture Synthesis</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 2 — Preconditions</strong><br>
+Purpose: Shows the seven structural requirements for synthesis.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|        CROSS‑ARCHITECTURE SYNTHESIS PRECONDITIONS         |
++-----------------------------------------------------------+
+| 1. COP‑valid expressions in all architectures             |
+| 2. USI‑valid units across architectures                   |
+| 3. Stable symbolic anchors                                |
+| 4. Compatible binding vectors                             |
+| 5. Resolution‑level compatibility                         |
+| 6. Interface compatibility                                |
+| 7. Cross‑architecture load below threshold                |
++-----------------------------------------------------------+
+Synthesis is disallowed if any precondition fails.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 2. CAP → CAS → CAF HIERARCHY -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>2. Synthesis Object Hierarchy</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 3 — Synthesis Objects</strong><br>
+Purpose: Shows the three cross‑architecture generative object types.
+</p>
+
+<pre>
+        +----------------------+
+        |   Cross‑Architecture |
+        |        Pair (CAP)    |
+        +----------------------+
+                   |
+                   v
+        +----------------------+
+        | Cross‑Architecture   |
+        |    Structure (CAS)   |
+        +----------------------+
+                   |
+                   v
+        +----------------------+
+        | Cross‑Architecture   |
+        |     Field (CAF)      |
+        +----------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 3. SYNTHESIS OPERATORS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>3. Synthesis Operators (S1–S10)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 4 — Synthesis Operators</strong><br>
+Purpose: Lists the ten operators that act across architectures.
+</p>
+
+<pre>
++------+---------------------------+
+| S1   | Align                     |
+| S2   | Bridge                    |
+| S3   | Couple                    |
+| S4   | Decouple                  |
+| S5   | Lift                      |
+| S6   | Compress                  |
+| S7   | Expand                    |
+| S8   | Constrain                 |
+| S9   | Reframe                   |
+| S10  | Stabilize                 |
++------+---------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 4. OPERATOR DYNAMICS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>4. Synthesis Operator Dynamics</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 5 — Operator Dynamics</strong><br>
+Purpose: Shows how operators transform CAPs and CASs.
+</p>
+
+<pre>
+S1 Align        → Align anchors across architectures
+S2 Bridge       → Form CAP (bind units across architectures)
+S3 Couple       → Create generative dependency
+S4 Decouple     → Remove dependency to prevent overload
+S5 Lift         → Raise CAP/CAS to higher resolution level
+S6 Compress     → Reduce resolution to maintain stability
+S7 Expand       → Increase generative scope
+S8 Constrain    → Limit propagation
+S9 Reframe      → Reconfigure after drift or overload
+S10 Stabilize   → Restore coherence across architectures
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 5. CROSS‑ARCHITECTURE INVARIANTS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>5. Cross‑Architecture Invariants</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 6 — Invariants</strong><br>
+Purpose: Shows the seven invariants that constrain synthesis.
+</p>
+
+<pre>
++--------------------------------------------------------------+
+|               CROSS‑ARCHITECTURE INVARIANTS                 |
++--------------------------------------------------------------+
+| 1. No synthesis under degraded intent                        |
+| 2. No cross‑architecture binding that increases drift        |
+| 3. No resolution expansion without anchor compatibility      |
+| 4. No synthesis chain exceeding load threshold               |
+| 5. No opposed binding vectors across architectures           |
+| 6. No unresolved collapse in any architecture                |
+| 7. No propagation of boundary failure                        |
++--------------------------------------------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 6. CROSS‑ARCHITECTURE BINDING -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>6. Cross‑Architecture Binding Patterns</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 7 — Cross‑Architecture Binding</strong><br>
+Purpose: Shows allowed and disallowed cross‑architecture binds.
+</p>
+
+<pre>
++-----------------------------+------------------------------+
+|     BINDING TYPE            |          STATUS              |
++-----------------------------+------------------------------+
+| Aligned Cross‑Bind          | Allowed                      |
+| Orthogonal Cross‑Bind       | Allowed                      |
+| Constrained Cross‑Bind      | Allowed                      |
+| Lifted Cross‑Bind           | Allowed                      |
+| Meta Cross‑Bind             | Allowed                      |
+| Opposed Cross‑Bind          | DISALLOWED                   |
++------------------------------------------------------------+
+
+Binding Requirements:
+• Compatible anchors
+• Non‑collapsing resolution signatures
+• Compatible interface markers
+• No invariant FAIL in any architecture
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 7. CROSS‑ARCHITECTURE COMPOSITION -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>7. Cross‑Architecture Composition</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 8 — Composition</strong><br>
+Purpose: Shows how CAPs combine into CASs.
+</p>
+
+<pre>
+CAP1 ----\
+          +---->  CAS  ---->  CAF
+CAP2 ----/
+
+Composition Requirements:
+• Stable binding sequences
+• No drift propagation
+• No boundary inversion
+• No relational collapse
+• No resolution collapse
+• No cross‑architecture overload
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 8. CANONICAL SYNTHESIS PATTERNS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>8. Canonical Synthesis Patterns</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 9 — Canonical Patterns</strong><br>
+Purpose: Shows the five stable synthesis trajectories.
+</p>
+
+<h3>Pattern 1: Bilateral Alignment</h3>
+<pre>
+A ↔ B
+Stable CAP formation.
+</pre>
+
+<h3>Pattern 2: Orthogonal Synthesis</h3>
+<pre>
+A → B
+A → C
+B ⟂ C
+Forms stable triad across architectures.
+</pre>
+
+<h3>Pattern 3: Lifted Synthesis</h3>
+<pre>
+CAP → Lift → Higher‑Resolution CAS
+</pre>
+
+<h3>Pattern 4: Constrained Expansion</h3>
+<pre>
+A → B → C
+Expansion limited by load threshold.
+</pre>
+
+<h3>Pattern 5: Meta‑Reframe</h3>
+<pre>
+A → B
+Collapse detected in B
+Reframe applied
+Structure restored.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 9. SYNTHESIS TRAJECTORIES -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>9. Synthesis Trajectories</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 13 — Synthesis Trajectories</strong><br>
+Purpose: Shows the cross‑architecture analog of generative trajectories.
+</p>
+
+<pre>
+T = [CAP1 → CAP2 → ... → CAPn]
+
+Trajectory Validity:
+• Preconditions satisfied at each step
+• No collapse without reframe
+• No drift propagation
+• No boundary violation
+• No relational inversion
+• No resolution‑level collapse
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 10. CROSS‑ARCHITECTURE MANIFOLD TOPOLOGY -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>10. Cross‑Architecture Manifold Topology</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 14 — Manifold Topology</strong><br>
+Purpose: Shows the global topology of cross‑architecture synthesis.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|           CROSS‑ARCHITECTURE MANIFOLD TOPOLOGY            |
++-----------------------------------------------------------+
+| Nodes: CAPs                                               |
+| Edges: Cross‑Binding Vectors                              |
+| Surfaces: CASs                                            |
+| Volumes: Cross‑Architecture Fields                        |
+| Gradients: Coherence Levels                               |
+| Contours: Boundary Configurations                         |
+| Flows: Synthesis Trajectories                             |
++-----------------------------------------------------------+
+
+Topology Constraints:
+1. No closed loops with unresolved drift
+2. No surfaces with boundary inversion
+3. No volumes exceeding load threshold
+4. No gradients reversing direction
+5. No flows crossing incompatible resolution levels
+</pre>
+</div>
+
+<hr>
+
+<footer>
+<p style="font-size: 0.9rem; color: #666;">
+CAGS Reference Diagrams — Part of the Universal Symbolic Interface (USI) Foundations Repository.
+</p>
+</footer>
+
+</body>
+</html>
