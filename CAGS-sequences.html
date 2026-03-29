@@ -1,1 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CAGS Reference Sequences — Cross‑Architecture Generative Synthesis</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  pre {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .sequence-block {
+    margin-bottom: 60px;
+  }
+  .desc {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
 
+<body>
+
+<h1>CAGS Reference Sequences</h1>
+
+<p>
+This page provides structural <strong>Reference Sequences</strong> for <strong>Paper 4 — Cross‑Architecture Generative Synthesis (CAGS)</strong>.  
+These sequences demonstrate how heterogeneous cognitive architectures align, bridge, couple, lift, constrain, reframe, and stabilize within a shared coherence field.  
+They illustrate the invariant‑driven dynamics that preserve coherence during cross‑architecture generativity.
+</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 1. BILATERAL ALIGNMENT -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>1. Bilateral Alignment (A ↔ B)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 9 — Pattern 1</strong><br>
+Purpose: Shows the minimal cross‑architecture alignment required before synthesis.
+</p>
+
+<pre>
+Architecture A
+  Anchor stable
+  Binding vectors coherent
+  Resolution compatible
+
+Architecture B
+  Anchor stable
+  Binding vectors coherent
+  Resolution compatible
+
+          |
+          v
+
+S1 Align
+  Aligns symbolic anchors across A and B
+  Ensures relational compatibility
+  No drift propagation
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Alignment is the prerequisite for all cross‑architecture synthesis. No bridging or coupling can occur without it.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 2. CAP FORMATION -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>2. CAP Formation (Cross‑Architecture Pair)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 7 — Cross‑Architecture Binding</strong><br>
+Purpose: Shows how two architectures form a Cross‑Architecture Pair (CAP).
+</p>
+
+<pre>
+Step 1: A.Unit U1
+  Anchor stable
+  Binding vector aligned
+
+Step 2: B.Unit U2
+  Anchor stable
+  Binding vector aligned
+
+          |
+          v
+
+S2 Bridge
+  Forms CAP = (U1_A, U2_B)
+  Requirements:
+    - Compatible anchors
+    - Non‑collapsing resolution signatures
+    - No invariant FAIL in either architecture
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+A CAP is the minimal cross‑architecture generative object. It is the analog of a USI‑Pair but spans architectures.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 3. CROSS‑ARCHITECTURE COUPLING -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>3. Controlled Coupling (S3 Couple → S4 Decouple)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 5 — Operator Dynamics</strong><br>
+Purpose: Shows how architectures couple for generativity and decouple to prevent overload.
+</p>
+
+<pre>
+Step 1: CAP (A ↔ B)
+  Stable aligned bind
+  Resolution compatible
+
+          |
+          v
+
+S3 Couple
+  Creates generative dependency
+  Enables shared symbolic propagation
+  No drift allowed
+
+          |
+          v
+
+S4 Decouple
+  Removes dependency
+  Prevents overload
+  Maintains coherence in both architectures
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Coupling is temporary and must be released before generative load exceeds threshold.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 4. LIFTED CROSS‑ARCHITECTURE SYNTHESIS -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>4. Lifted Synthesis (S5 Lift → S3 Couple)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 9 — Pattern 3</strong><br>
+Purpose: Shows how CAPs are lifted to higher resolution before forming CASs.
+</p>
+
+<pre>
+Step 1: CAP (Resolution L2)
+  Anchors stable
+  Binding vectors aligned
+
+          |
+          v
+
+S5 Lift
+  CAP (L2 → L3)
+  Anchor stability required
+  No collapse allowed
+
+          |
+          v
+
+S3 Couple
+  Higher‑resolution CAP participates in synthesis
+  Enables formation of CAS (Cross‑Architecture Structure)
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Lifted synthesis increases structural clarity before cross‑architecture composition.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 5. CROSS‑ARCHITECTURE COMPOSITION -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>5. CAP → CAS Composition</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 8 — Cross‑Architecture Composition</strong><br>
+Purpose: Shows how multiple CAPs combine into a CAS.
+</p>
+
+<pre>
+CAP1 = (A.U1, B.U2)
+CAP2 = (A.U3, C.U4)
+
+          |
+          v
+
+S3 Couple
+  Establishes generative dependencies
+
+          |
+          v
+
+S7 Expand
+  Adds additional CAPs
+  Load must remain below threshold
+
+          |
+          v
+
+CAS = {CAP1, CAP2, ...}
+  Requirements:
+    - Stable cross‑architecture binding chains
+    - No relational collapse
+    - No boundary inversion
+    - No resolution collapse
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+A CAS is the cross‑architecture analog of a USI‑Structure. It spans multiple architectures while preserving coherence.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 6. CROSS‑ARCHITECTURE COLLAPSE RECOVERY -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>6. Collapse Recovery Loop (S9 Reframe → S10 Stabilize)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 4, Section 12 — Collapse Modes</strong><br>
+Purpose: Shows how collapse is detected and resolved across architectures.
+</p>
+
+<pre>
+Step 1: CAS
+  Collapse indicators:
+    - Anchor divergence
+    - Cross‑resolution collapse
+    - Binding inversion
+    - Load overrun
+
+          |
+          v
+
+S9 Reframe
+  Reconfigures synthesis object
+  Restores anchor compatibility
+  Re‑aligns cross‑binding vectors
+  Clears collapse state
+
+          |
+          v
+
+S10 Stabilize
+  Restores coherence across architectures
+  Prevents collapse propagation
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Cross‑architecture collapse must be followed by reframe. Stabilization ensures safe re‑entry into the synthesis manifold.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 7. FULL CROSS‑ARCHITECTURE TRAJECTORY -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>7. Full CAGS Trajectory (Align → Bridge → Couple → Lift → Compose → Reframe → Stabilize)</h2>
+<p class="desc">
+Purpose: A complete cross‑architecture generative loop demonstrating alignment, CAP formation, coupling, lifting, composition, and recovery.
+</p>
+
+<pre>
+A ↔ B
+  S1 Align
+      ↓
+CAP = (A.U1, B.U2)
+  S2 Bridge
+      ↓
+S3 Couple
+      ↓
+S5 Lift
+      ↓
+CAS Formation
+  S7 Expand
+      ↓
+Collapse Detected
+  S9 Reframe
+      ↓
+S10 Stabilize
+      ↓
+Coherent Cross‑Architecture Field
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+This trajectory demonstrates the full cross‑architecture generative cycle: alignment → formation → coupling → elevation → composition → recovery → stabilization.</p>
+</div>
+
+<hr>
+
+<footer>
+<p style="font-size: 0.9rem; color: #666;">
+CAGS Reference Sequences — Part of the Universal Symbolic Interface (USI) Foundations Repository.
+</p>
+</footer>
+
+</body>
+</html>
