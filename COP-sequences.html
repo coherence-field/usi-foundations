@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>COP Reference Sequences — Coherence Operating Protocol</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  pre {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .sequence-block {
+    margin-bottom: 60px;
+  }
+  .desc {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
 
+<body>
+
+<h1>COP Reference Sequences</h1>
+
+<p>
+This page provides structural <strong>Reference Sequences</strong> for <strong>Paper 1 — The Coherence Operating Protocol (COP)</strong>.  
+These sequences demonstrate how COP states, operators, invariants, and transition‑types interact in motion.  
+They are not examples in the domain sense; they are <em>purely structural trajectories</em> that illustrate coherence‑preserving evolution within the COP substrate.
+</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 1. INQUIRY SEQUENCE -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>1. Stable Inquiry Loop (S1 → S1 → S1)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 11.1 — Inquiry Sequence</strong><br>
+Purpose: Shows a stable inquiry trajectory with no drift, collapse, or boundary change.
+</p>
+
+<pre>
+Step 1: S1  (Stable Framed Inquiry)
+  O = Inquire
+  TT = Inquire
+  Boundary = explicit
+  Invariants OK
+
+          |
+          v
+
+Step 2: S1  (Stable Framed Inquiry)
+  O = Inquire
+  TT = None
+  No drift, no boundary change
+  Invariants remain OK
+
+          |
+          v
+
+Step 3: S1  (Stable Framed Inquiry)
+  O = Inquire
+  TT = None
+  Coherence stable, intent remains I1
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+A pure inquiry loop maintains explicit boundaries, stable coherence, and invariant satisfaction. No constructive or drift‑inducing operators appear.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 2. CONSTRUCTION SEQUENCE -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>2. Boundary‑Formation → Construction (S1 → S4 → S2 → S2)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 11.2 — Construction Sequence</strong><br>
+Purpose: Shows how COP enforces boundary formation before construction.
+</p>
+
+<pre>
+Step 1: S1  (Stable Framed Inquiry)
+  O = Inquire
+  TT = Inquire
+  Boundary explicit
+
+          |
+          v
+
+Step 2: S4  (Boundary Formation)
+  O = Frame‑Form
+  TT = FormBoundary
+  Boundary: implicit → explicit
+  Invariant I4 enforced (boundary required for construction)
+
+          |
+          v
+
+Step 3: S2  (Stable Framed Construction)
+  O = Construct
+  TT = Construct
+  Relation: aligned or coupled
+  Intent must be I1 (I1 → I1)
+
+          |
+          v
+
+Step 4: S2  (Continued Construction)
+  O = Construct
+  TT = None
+  Coherence stable, no drift
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Construction is only admissible after explicit boundary formation. No drift, collapse, or invariant violations occur.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 3. DRIFT → STABILIZATION → REFRAME -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>3. Drift Recovery Loop (S2 → S3 → S6 → S1)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 11.3 — Stabilization Sequence</strong><br>
+Purpose: Shows how COP handles drift through stabilization and reframe.
+</p>
+
+<pre>
+Step 1: S2  (Stable Construction)
+  O = Construct
+  TT = Construct
+  Coherence stable
+
+          |
+          v
+
+Step 2: S3  (Stabilizing Drift)
+  O = Drift‑Detect
+  TT = Stabilize
+  Coherence drifting
+  Invariant I6 triggered (drift → stabilization)
+
+          |
+          v
+
+Step 3: S6  (Coherent Reframe)
+  O = Reframe
+  TT = Reframe
+  Boundary re‑established
+  Relation re‑aligned or decoupled
+
+          |
+          v
+
+Step 4: S1  (Stable Inquiry)
+  O = Inquire
+  TT = Inquire
+  Coherence restored
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Drift cannot persist. COP forces stabilization and reframe before returning to inquiry or construction.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 4. PRE‑COLLAPSE RESCUE -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>4. Pre‑Collapse Rescue (S2/S3 → S5 → S6 → S1/S3)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 11.4 — Pre‑Collapse Rescue</strong><br>
+Purpose: Shows how COP prevents collapse by enforcing immediate reframe.
+</p>
+
+<pre>
+Step 1: S2 or S3
+  O = Construct or Drift‑Detect
+  TT = Construct or Stabilize
+  Coherence weakening
+
+          |
+          v
+
+Step 2: S5  (Pre‑Collapse Overload)
+  O = Collapse‑Guard
+  TT = Warning
+  Boundary permeable or failing
+  Relation over‑coupled or opposed
+  Intent degrading (I3 or I4)
+  All constructive operators disallowed
+
+          |
+          v
+
+Step 3: S6  (Coherent Reframe)
+  O = Reframe
+  TT = Reframe
+  Boundary re‑established
+  Invariants restored
+
+          |
+          v
+
+Step 4: S1 or S3
+  O = Inquire or Stabilize
+  TT = Inquire or Stabilize
+  Coherence recovering
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+S5 cannot persist. COP forces a reframe (S6) immediately, preventing collapse propagation.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 5. FULL COP TRAJECTORY -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>5. Full COP Trajectory (S1 → S4 → S2 → S3 → S6 → S1)</h2>
+<p class="desc">
+Purpose: A complete coherence‑preserving loop showing inquiry → boundary formation → construction → drift → reframe → restored inquiry.
+</p>
+
+<pre>
+S1 (Inquiry)
+  O = Inquire
+  TT = Inquire
+
+      ↓
+
+S4 (Boundary Formation)
+  O = Frame‑Form
+  TT = FormBoundary
+
+      ↓
+
+S2 (Construction)
+  O = Construct
+  TT = Construct
+
+      ↓
+
+S3 (Stabilizing Drift)
+  O = Drift‑Detect
+  TT = Stabilize
+
+      ↓
+
+S6 (Coherent Reframe)
+  O = Reframe
+  TT = Reframe
+
+      ↓
+
+S1 (Inquiry Restored)
+  O = Inquire
+  TT = Inquire
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+This is the minimal trajectory that demonstrates COP’s full coherence cycle: formation → construction → drift → recovery → stabilization.</p>
+</div>
+
+<hr>
+
+<footer>
+<p style="font-size: 0.9rem; color: #666;">
+COP Reference Sequences — Part of the Universal Symbolic Interface (USI) Foundations Repository.
+</p>
+</footer>
+
+</body>
+</html>
