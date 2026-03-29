@@ -1,1 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Integration Layer Reference Diagrams — USI Foundations</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  pre {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .diagram-block {
+    margin-bottom: 60px;
+  }
+  .desc {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
 
+<body>
+
+<h1>Integration Layer Reference Diagrams</h1>
+
+<p>
+These diagrams provide structural reference for <strong>Paper 5 — The Universal Symbolic Interface (USI): Integration Layer</strong>.  
+The paper is fully self‑contained in text form, but the integration geometry benefits from visual representation.  
+These diagrams map the integration lattice, global coherence field, symbolic handshake, integration operators, invariants, integration objects, patterns, trajectories, and interface topology.
+</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 1. INTEGRATION LATTICE -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>1. Integration Lattice</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 3 — The USI Integration Lattice</strong><br>
+Purpose: Shows the seven coherence‑linked levels unified by the integration layer.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                   USI INTEGRATION LATTICE                 |
++-----------------------------------------------------------+
+| 1. COP Level                                              |
+| 2. USI Symbolic Level                                     |
+| 3. Generative Level                                       |
+| 4. Cross‑Architecture Level                               |
+| 5. Interface Level                                        |
+| 6. Resolution Level                                       |
+| 7. Global Coherence Field                                 |
++-----------------------------------------------------------+
+All levels remain independent but coherence‑linked.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 2. GLOBAL COHERENCE FIELD -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>2. Global Coherence Field</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 5 — The Global Coherence Field</strong><br>
+Purpose: Shows the structural environment in which integration occurs.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                 GLOBAL COHERENCE FIELD                    |
++-----------------------------------------------------------+
+| • Coherence Gradients                                     |
+| • Boundary Contours                                       |
+| • Relational Vectors                                      |
+| • Intent‑Vector Orientation                               |
+| • Resolution Levels                                       |
+| • Temporal Orientation                                    |
++-----------------------------------------------------------+
+A structural field unifying all layers of the architecture.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 3. SYMBOLIC HANDSHAKE -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>3. The USI Symbolic Handshake</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 6 — The Symbolic Handshake</strong><br>
+Purpose: Shows the compatibility requirements for entering the global coherence field.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                 SYMBOLIC HANDSHAKE                        |
++-----------------------------------------------------------+
+| 1. Boundary Compatibility                                 |
+| 2. Relational Compatibility                               |
+| 3. Intent Compatibility                                   |
+| 4. Resolution Compatibility                               |
+| 5. Generative Compatibility                               |
+| 6. Interface Compatibility                                |
++-----------------------------------------------------------+
+Prevents drift at the moment of entry.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 4. INTEGRATION OPERATORS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>4. Integration Operators (I1–I10)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 7 — Integration Operators</strong><br>
+Purpose: Lists the ten operators that unify symbolic structures across levels.
+</p>
+
+<pre>
++------+---------------------------+
+| I1   | Align                     |
+| I2   | Anchor                    |
+| I3   | Bind                      |
+| I4   | Lift                      |
+| I5   | Compress                  |
+| I6   | Expand                    |
+| I7   | Constrain                 |
+| I8   | Reframe                   |
+| I9   | Stabilize                 |
+| I10  | Integrate                 |
++------+---------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 5. OPERATOR DYNAMICS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>5. Integration Operator Dynamics</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 8 — Operator Dynamics</strong><br>
+Purpose: Shows how operators act across levels.
+</p>
+
+<pre>
+I1 Align      → Align structures across levels
+I2 Anchor     → Assign stable positions in coherence field
+I3 Bind       → Form cross‑level symbolic connections
+I4 Lift       → Raise structures to higher resolution
+I5 Compress   → Reduce resolution to maintain stability
+I6 Expand     → Increase symbolic scope
+I7 Constrain  → Limit propagation
+I8 Reframe    → Reconfigure after drift
+I9 Stabilize  → Restore coherence
+I10 Integrate → Unify structures into global manifold
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 6. INTEGRATION INVARIANTS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>6. Integration Invariants</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 9 — Integration Invariants</strong><br>
+Purpose: Shows the seven invariants that constrain integration.
+</p>
+
+<pre>
++--------------------------------------------------------------+
+|                 INTEGRATION INVARIANTS                      |
++--------------------------------------------------------------+
+| 1. No integration under degraded intent                      |
+| 2. No cross‑level binding that increases drift               |
+| 3. No resolution expansion without anchor stability          |
+| 4. No integration chain exceeding global load threshold      |
+| 5. No opposed binding vectors across levels                  |
+| 6. No unresolved collapse in any level                       |
+| 7. No propagation of boundary failure                        |
++--------------------------------------------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 7. INTEGRATION OBJECTS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>7. Integration Objects</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 10 — Integration Objects</strong><br>
+Purpose: Shows the three object types unified by the integration layer.
+</p>
+
+<pre>
+        +----------------------+
+        |   Integrated Unit    |
+        |        (IU)          |
+        +----------------------+
+                   |
+                   v
+        +----------------------+
+        | Integrated Structure |
+        |        (IS)          |
+        +----------------------+
+                   |
+                   v
+        +----------------------+
+        | Integrated Field     |
+        |        (IF)          |
+        +----------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 8. INTEGRATION PATTERNS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>8. Integration Patterns</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 11 — Integration Patterns</strong><br>
+Purpose: Shows the five canonical integration trajectories.
+</p>
+
+<h3>Pattern 1: Layer Alignment</h3>
+<pre>
+COP → USI → Generative → CAGS
+Sequential alignment across levels.
+</pre>
+
+<h3>Pattern 2: Cross‑Level Lift</h3>
+<pre>
+Object → Lift → Higher‑Resolution Integration
+</pre>
+
+<h3>Pattern 3: Constrained Integration</h3>
+<pre>
+Integration limited by global load threshold.
+</pre>
+
+<h3>Pattern 4: Meta‑Integration</h3>
+<pre>
+Integration across architectures and levels simultaneously.
+</pre>
+
+<h3>Pattern 5: Reframe Integration</h3>
+<pre>
+Collapse detected
+Reframe applied
+Integration restored.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 9. INTEGRATION TRAJECTORIES -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>9. Integration Trajectories</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 13 — Integration Trajectories</strong><br>
+Purpose: Shows the cross‑level analog of generative and synthesis trajectories.
+</p>
+
+<pre>
+T = [IU1 → IU2 → ... → IUn]
+
+Trajectory Validity:
+• Preconditions satisfied at each step
+• No collapse without reframe
+• No drift propagation
+• No boundary violation
+• No relational inversion
+• No resolution‑level collapse
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 10. INTERFACE TOPOLOGY -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>10. Interface Topology</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 5, Section 14 — Interface Topology</strong><br>
+Purpose: Shows the global topology of the integrated symbolic system.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                    INTERFACE TOPOLOGY                     |
++-----------------------------------------------------------+
+| Nodes: Integrated Units                                   |
+| Edges: Cross‑Level Binding Vectors                        |
+| Surfaces: Integrated Structures                           |
+| Volumes: Integrated Fields                                |
+| Gradients: Coherence Levels                               |
+| Contours: Boundary Configurations                         |
+| Flows: Integration Trajectories                           |
++-----------------------------------------------------------+
+
+Topology Constraints:
+1. No closed loops with unresolved drift
+2. No surfaces with boundary inversion
+3. No volumes exceeding integration load
+4. No gradients reversing direction
+5. No flows crossing incompatible resolution levels
+</pre>
+</div>
+
+<hr>
+
+<footer>
+<p style="font-size: 0.9rem; color: #666;">
+Integration Layer Reference Diagrams — Part of the Universal Symbolic Interface (USI) Foundations Repository.
+</p>
+</footer>
+
+</body>
+</html>
