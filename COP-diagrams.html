@@ -1,1 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>COP Reference Diagrams — Coherence Operating Protocol</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  pre {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .diagram-block {
+    margin-bottom: 60px;
+  }
+  .desc {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
 
+<body>
+
+<h1>COP Reference Diagrams</h1>
+
+<p>
+These diagrams provide structural reference for <strong>Paper 1 — The Coherence Operating Protocol (COP)</strong>.  
+The foundational paper is fully self‑contained in text form, but COP’s geometry benefits from visual representation.  
+These diagrams map the lattice, states, operators, invariants, expression formats, and canonical sequences that define the COP substrate.
+</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 1. COP LATTICE -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>1. COP Structural Lattice</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 2 — The COP Lattice</strong><br>
+Purpose: Shows the five independent dimensions that define COP’s coherence geometry.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                     COP STRUCTURAL LATTICE               |
++-----------------------------------------------------------+
+| 1. COHERENCE   | Stable | Drifting | Collapsed           |
+| 2. BOUNDARY    | Implicit | Explicit | Permeable | Failing|
+| 3. RELATION    | Aligned | Orthogonal | Coupled | Opposed|
+| 4. INTENT      | I1 Clear | I2 Split | I3 Degrading | I4 Degraded |
+| 5. TIME        | Ordered sequence t0 → t1                 |
++-----------------------------------------------------------+
+Minimal independent set for coherence-preserving generativity.
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 2. COP STATE SPACE -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>2. COP State Space (S1–S6)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 3 — COP State Space</strong><br>
+Purpose: Maps the six canonical COP states.
+</p>
+
+<pre>
++----------------------+-----------------------------+
+|        STATE         |        DESCRIPTION          |
++----------------------+-----------------------------+
+| S1 Inquiry           | Stable, explicit boundary   |
+| S2 Construction      | Stable, aligned/coupled     |
+| S3 Stabilizing Drift | Drifting, boundary tighten  |
+| S4 Boundary Formation| Implicit → explicit         |
+| S5 Pre‑Collapse      | Drifting → collapse         |
+| S6 Coherent Reframe  | Stabilizing, new boundary   |
++----------------------+-----------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 3. STATE–PRIMITIVE COMPATIBILITY -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>3. State–Primitive Compatibility</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 4 — State‑Primitive Compatibility</strong><br>
+Purpose: Shows which primitives are admissible in each state.
+</p>
+
+<pre>
++----------------------+-------------------------------------------+
+| STATE | ALLOWED PRIMITIVES              | DISALLOWED            |
++----------------------+-------------------------------------------+
+| S1    | Inquiry, alignment               | Construction, drift   |
+| S2    | Construction, alignment          | Opposition, drift     |
+| S3    | Compression, boundary‑tighten    | Expansion, construct  |
+| S4    | Compression, sorting             | Construct, expand     |
+| S5    | None (overload)                  | All constructive ops  |
+| S6    | Meta‑inquiry, compression        | Construct, expand     |
++------------------------------------------------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 4. COP OPERATORS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>4. COP Operators (O1–O10)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 5 — COP Operators</strong><br>
+Purpose: Lists the ten operators that drive COP transitions.
+</p>
+
+<pre>
++------+-----------------------+
+| O1   | Boundary‑Tighten      |
+| O2   | Boundary‑Reform       |
+| O3   | Relation‑Align        |
+| O4   | Relation‑Decouple     |
+| O5   | Coherence‑Stabilize   |
+| O6   | Intent‑Clarify        |
+| O7   | Intent‑Constrain      |
+| O8   | Drift‑Detect          |
+| O9   | Collapse‑Guard        |
+| O10  | Frame‑Form            |
++------+-----------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 5. COP INVARIANTS -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>5. COP Invariants (I1–I7)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 6 — COP Invariants</strong><br>
+Purpose: Shows the invariant constraints that govern admissible transitions.
+</p>
+
+<pre>
++--------------------------------------------------------------+
+|                    COP INVARIANTS (I1–I7)                   |
++--------------------------------------------------------------+
+| I1  No construction under degraded intent (I3/I4)            |
+| I2  Reframe before collapse                                 |
+| I3  No coupling increase in S5                               |
+| I4  Boundary required for construction                       |
+| I5  Inquiry must not degrade coherence                       |
+| I6  Drift must trigger stabilization or reframe              |
+| I7  Intent must always be classified (I1–I4)                 |
++--------------------------------------------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 6. COP EXPRESSION FORMAT -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>6. COP Expression Format (v0)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 7 — COP Expression Format</strong><br>
+Purpose: Shows the atomic COP expression structure.
+</p>
+
+<pre>
++---------------- COP-EXPR ----------------+
+| S  = Current State                       |
+| P  = Active Primitives                   |
+| O  = Operator Applied                    |
+| I  = Invariant Status Vector             |
+| TT = Transition Type                     |
++------------------------------------------+
+
+Transition Types:
+Stabilize | Reframe | Construct | Inquire | FormBoundary | Warning | None
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 7. COP SEQUENCE FORMAT -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>7. COP Sequence Format (v0)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 8 — COP Sequence Format</strong><br>
+Purpose: Shows how COP expressions form valid sequences.
+</p>
+
+<pre>
+Seq = [E1 → E2 → ... → En]
+
+Validity Conditions:
+• Adjacent states satisfy transition rules
+• No invariant remains FAIL
+• S5 must be followed by S6
+• No construction under I3/I4
+• Drift → Stabilize or Reframe
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 8. LOCAL VALIDITY -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>8. Local Validity Constraints</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 9 — Local Validity</strong><br>
+Purpose: Shows the three local constraints between adjacent expressions.
+</p>
+
+<pre>
++---------------------+
+|   Ek (current)      |
++---------------------+
+          |
+          v
++---------------------+
+| State Continuity    |
+| (TT → next state)   |
++---------------------+
+          |
+          v
++---------------------+
+| Invariant Monotonic |
+| FAIL → WARN/OK      |
++---------------------+
+          |
+          v
++---------------------+
+| Intent Evolution    |
+| I1→I2→I3→I4 or back |
++---------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 9. GLOBAL VALIDITY -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>9. Global Validity Constraints</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 10 — Global Validity</strong><br>
+Purpose: Shows the global rules that govern entire COP sequences.
+</p>
+
+<pre>
++-----------------------------------------------------------+
+|                 GLOBAL VALIDITY RULES                    |
++-----------------------------------------------------------+
+| • No invariant remains FAIL                               |
+| • No construction under I3/I4                             |
+| • S5 always followed by S6                                |
+| • Drift always followed by Stabilize/Reframe              |
+| • Boundaries never weakened during construction           |
+| • Coupling never increased in S5                          |
+| • Inquiry never induces drift                             |
++-----------------------------------------------------------+
+</pre>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 10. CANONICAL SEQUENCES -->
+<!-- ========================================================= -->
+
+<div class="diagram-block">
+<h2>10. Canonical COP Sequences</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 1, Section 11 — Canonical Sequence Patterns</strong><br>
+Purpose: Shows the four canonical COP trajectories.
+</p>
+
+<h3>Inquiry Sequence</h3>
+<pre>
+S1 → S1 → S1
+TT: Inquire / None
+</pre>
+
+<h3>Construction Sequence</h3>
+<pre>
+S1 → S4 → S2 → S2
+TT: FormBoundary → Construct
+</pre>
+
+<h3>Stabilization Sequence</h3>
+<pre>
+S2 → S3 → S6 → S1/S2
+TT: Stabilize → Reframe → Inquire/Construct
+</pre>
+
+<h3>Pre‑Collapse Rescue</h3>
+<pre>
+S2/S3 → S5 → S6 → S1/S3
+TT: Warning → Reframe → Stabilize/Inquire
+</pre>
+</div>
+
+<hr>
+
+<footer>
+<p style="font-size: 0.9rem; color: #666;">
+COP Reference Diagrams — Part of the Universal Symbolic Interface (USI) Foundations Repository.
+</p>
+</footer>
+
+</body>
+</html>
