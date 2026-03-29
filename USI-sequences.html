@@ -1,1 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>USI Reference Sequences — Universal Symbolic Interface</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  pre {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .sequence-block {
+    margin-bottom: 60px;
+  }
+  .desc {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
 
+<body>
+
+<h1>USI Reference Sequences</h1>
+
+<p>
+This page provides structural <strong>Reference Sequences</strong> for <strong>Paper 2 — The Universal Symbolic Interface (USI)</strong>.  
+These sequences demonstrate how USI‑Units bind, lift, compress, compose, and stabilize within the symbolic manifold.  
+They are not domain examples; they are <em>pure symbolic trajectories</em> that illustrate coherence‑preserving generativity at the USI level.
+</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 1. BASIC BINDING SEQUENCE -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>1. Aligned Binding Sequence (U1 + U2 → Pair)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 7 — Binding Rules</strong><br>
+Purpose: Shows how two USI‑Units form a stable aligned bind.
+</p>
+
+<pre>
+Step 1: U1 (USI‑Unit)
+  Anchor stable
+  Binding vector: aligned
+  Resolution signature: L2
+
+Step 2: U2 (USI‑Unit)
+  Anchor stable
+  Binding vector: aligned
+  Resolution signature: L2
+
+          |
+          v
+
+Step 3: G1 (Symbolic‑Bind)
+  Forms USI‑Pair = (U1, U2)
+  Binding type: aligned
+  No invariant FAIL
+  No drift propagation
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Aligned binding is the simplest generative act in USI. It requires anchor stability, compatible binding vectors, and non‑collapsing resolution signatures.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 2. LIFTING SEQUENCE -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>2. Lift to Higher Resolution (L2 → L3 → L4)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 8 — Resolution Levels</strong><br>
+Purpose: Shows how a USI‑Unit or USI‑Pair is lifted across resolution levels.
+</p>
+
+<pre>
+Step 1: U (Resolution L2)
+  Anchor stable
+  Binding vector coherent
+
+          |
+          v
+
+Step 2: G3 (Symbolic‑Lift)
+  Resolution: L2 → L3
+  Anchor stability required
+  No collapse allowed
+
+          |
+          v
+
+Step 3: G3 (Symbolic‑Lift)
+  Resolution: L3 → L4
+  Binding vector preserved
+  Interface marker unchanged
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Lifting increases structural visibility and generative capacity. It cannot occur under drift, collapse, or anchor instability.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 3. COMPRESSION SEQUENCE -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>3. Compression for Stability (L4 → L3 → L2)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 10 — Generative Operators (G4)</strong><br>
+Purpose: Shows how resolution is reduced to maintain coherence.
+</p>
+
+<pre>
+Step 1: U (Resolution L4)
+  Generative load increasing
+  Drift risk detected
+
+          |
+          v
+
+Step 2: G4 (Symbolic‑Compress)
+  Resolution: L4 → L3
+  Structure preserved
+  No boundary inversion
+
+          |
+          v
+
+Step 3: G4 (Symbolic‑Compress)
+  Resolution: L3 → L2
+  Coherence stabilized
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Compression reduces generative load while preserving structural integrity. It is a coherence‑preserving contraction.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 4. STRUCTURAL COMPOSITION -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>4. Composition of a USI‑Structure (Pair → Structure)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 10 — Structural‑Compose (G5)</strong><br>
+Purpose: Shows how USI‑Pairs combine into higher‑order structures.
+</p>
+
+<pre>
+Step 1: Pair A = (U1, U2)
+  Stable aligned bind
+
+Step 2: Pair B = (U3, U4)
+  Stable orthogonal bind
+
+          |
+          v
+
+Step 3: G5 (Structural‑Compose)
+  Structure S = {Pair A, Pair B}
+  Binding chain stable
+  No relational collapse
+  No cross‑level leakage
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Composition forms multi‑unit symbolic structures. All interface constraints must remain satisfied.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 5. GENERATIVE EXPANSION WITH CONSTRAINT -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>5. Controlled Expansion (S → S+1 → S+2)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 10 — Generative‑Expand (G7)</strong><br>
+Purpose: Shows expansion limited by generative load and interface constraints.
+</p>
+
+<pre>
+Step 1: Structure S
+  Resolution L3
+  Generative load below threshold
+
+          |
+          v
+
+Step 2: G7 (Generative‑Expand)
+  Adds new USI‑Unit U5
+  Binding vector compatible
+  No drift propagation
+
+          |
+          v
+
+Step 3: G8 (Generative‑Constrain)
+  Limits further expansion
+  Prevents overload
+  Maintains coherence
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Expansion is always bounded by generative load and interface constraints. Constrain (G8) prevents symbolic inflation.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 6. META‑REFRAME SEQUENCE -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>6. Meta‑Reframe After Collapse Risk</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 2, Section 15 — Error‑Correction Level</strong><br>
+Purpose: Shows how USI corrects structural degradation.
+</p>
+
+<pre>
+Step 1: Structure S
+  Drift detected
+  Resolution instability emerging
+
+          |
+          v
+
+Step 2: G9 (Meta‑Reframe)
+  Reconfigures symbolic structure
+  Restores anchor stability
+  Re‑aligns binding vectors
+
+          |
+          v
+
+Step 3: G10 (Field‑Stabilize)
+  Stabilizes symbolic field
+  Prevents collapse propagation
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Meta‑Reframe is the symbolic‑level analog of COP’s S6. It restores coherence after structural degradation.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 7. FULL USI TRAJECTORY -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>7. Full USI Trajectory (Bind → Lift → Compose → Expand → Constrain → Reframe)</h2>
+<p class="desc">
+Purpose: A complete symbolic‑level generative loop demonstrating binding, lifting, composition, expansion, constraint, and reframe.
+</p>
+
+<pre>
+U1 + U2
+  G1 Bind
+      ↓
+USI‑Pair
+  G3 Lift
+      ↓
+Higher‑Resolution Pair
+  G5 Compose
+      ↓
+USI‑Structure
+  G7 Expand
+      ↓
+Expanded Structure
+  G8 Constrain
+      ↓
+Controlled Structure
+  G9 Reframe
+      ↓
+Stabilized Symbolic Configuration
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+This trajectory demonstrates the full symbolic generative cycle: formation → elevation → composition → expansion → constraint → stabilization.</p>
+</div>
+
+<hr>
+
+<footer>
+<p style="font-size: 0.9rem; color: #666;">
+USI Reference Sequences — Part of the Universal Symbolic Interface (USI) Foundations Repository.
+</p>
+</footer>
+
+</body>
+</html>
