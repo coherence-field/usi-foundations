@@ -1,1 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Generative Reference Sequences — USI Generative Architecture</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  pre {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .sequence-block {
+    margin-bottom: 60px;
+  }
+  .desc {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
 
+<body>
+
+<h1>Generative Reference Sequences</h1>
+
+<p>
+This page provides structural <strong>Reference Sequences</strong> for <strong>Paper 3 — The USI Generative Architecture</strong>.  
+These sequences demonstrate how USI‑Units bind, pair, compose, lift, compress, expand, constrain, stabilize, and reframe within the generative layer.  
+They illustrate the invariant‑driven dynamics that preserve coherence during symbolic construction.
+</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 1. UNIT → PAIR FORMATION -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>1. Unit → Pair Formation (G1 Bind)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 3, Section 4 — Generative Operators (G1)</strong><br>
+Purpose: Shows the minimal generative act: forming a USI‑Pair from two Units.
+</p>
+
+<pre>
+Step 1: U1 (USI‑Unit)
+  Anchor stable
+  Binding vector aligned
+  Resolution signature non‑collapsing
+
+Step 2: U2 (USI‑Unit)
+  Anchor stable
+  Binding vector aligned
+  Resolution signature non‑collapsing
+
+          |
+          v
+
+Step 3: G1 Bind
+  Forms USI‑Pair P = (U1, U2)
+  Binding type: aligned
+  Invariants satisfied:
+    - No opposed vectors
+    - No drift propagation
+    - No collapse in either unit
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Pair formation is the atomic generative step. It requires anchor stability, compatible binding vectors, and invariant compliance.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 2. PAIR → STRUCTURE COMPOSITION -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>2. Pair → Structure Composition (G3 Compose)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 3, Section 8 — Generative Composition</strong><br>
+Purpose: Shows how multiple USI‑Pairs combine into a USI‑Structure.
+</p>
+
+<pre>
+Step 1: Pair A = (U1, U2)
+  Stable aligned bind
+
+Step 2: Pair B = (U3, U4)
+  Stable orthogonal bind
+
+          |
+          v
+
+Step 3: G3 Compose
+  Structure S = {Pair A, Pair B}
+  Requirements:
+    - Stable binding chains
+    - No relational collapse
+    - No boundary inversion
+    - No generative overload
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Composition is structural, not additive. It forms multi‑unit generative objects while preserving coherence.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 3. LIFTED COMPOSITION -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>3. Lifted Composition (G5 Lift → G3 Compose)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 3, Section 9 — Canonical Generative Patterns (Pattern 3)</strong><br>
+Purpose: Shows how lifting increases generative resolution before composition.
+</p>
+
+<pre>
+Step 1: U1 + U2
+  G1 Bind → Pair P
+
+          |
+          v
+
+Step 2: G5 Lift
+  P (L2) → P (L3)
+  Anchor stability required
+  No collapse allowed
+
+          |
+          v
+
+Step 3: G3 Compose
+  P (L3) + U3 → Structure S
+  Higher‑resolution composite
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Lifted composition increases structural clarity and generative capacity before forming a multi‑unit structure.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 4. CONTROLLED EXPANSION -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>4. Controlled Expansion (G7 Expand → G8 Constrain)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 3, Section 9 — Canonical Generative Patterns (Pattern 4)</strong><br>
+Purpose: Shows expansion limited by generative load and invariants.
+</p>
+
+<pre>
+Step 1: Structure S
+  Generative load below threshold
+  Resolution stable
+
+          |
+          v
+
+Step 2: G7 Expand
+  Adds new Unit U5
+  Binding vector compatible
+  No invariant FAIL
+
+          |
+          v
+
+Step 3: G8 Constrain
+  Limits further expansion
+  Prevents overload
+  Maintains coherence
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Expansion is always bounded. Constrain (G8) prevents symbolic inflation and drift propagation.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 5. COLLAPSE → REFRAME → STABILIZE -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>5. Collapse Recovery Loop (G9 Reframe → G10 Stabilize)</h2>
+<p class="desc">
+Corresponds to: <strong>Paper 3, Section 12 — Collapse Modes</strong><br>
+Purpose: Shows how generative collapse is detected and resolved.
+</p>
+
+<pre>
+Step 1: Structure S
+  Collapse indicators:
+    - Binding inversion
+    - Resolution collapse
+    - Anchor drift
+    - Load overrun
+
+          |
+          v
+
+Step 2: G9 Reframe
+  Reconfigures generative object
+  Restores anchor stability
+  Re‑aligns binding vectors
+  Clears collapse state
+
+          |
+          v
+
+Step 3: G10 Stabilize
+  Restores coherence
+  Prevents collapse propagation
+  Re‑enters generative manifold
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+Collapse must be followed by reframe. Stabilization ensures the structure re‑enters the generative field safely.</p>
+</div>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- 6. FULL GENERATIVE TRAJECTORY -->
+<!-- ========================================================= -->
+
+<div class="sequence-block">
+<h2>6. Full Generative Trajectory (Unit → Pair → Structure → Drift → Reframe → Stabilize)</h2>
+<p class="desc">
+Purpose: A complete generative loop demonstrating formation, composition, drift detection, reframe, and stabilization.
+</p>
+
+<pre>
+U1 + U2
+  G1 Bind
+      ↓
+Pair P
+  G3 Compose with U3
+      ↓
+Structure S
+  G7 Expand
+      ↓
+Drift Detected
+  G9 Reframe
+      ↓
+G10 Stabilize
+      ↓
+Coherent Generative Object
+</pre>
+
+<p><strong>Structural Meaning:</strong>  
+This trajectory demonstrates the generative architecture’s full coherence cycle: formation → composition → expansion → drift → recovery → stabilization.</p>
+</div>
+
+<hr>
+
+<footer>
+<p style="font-size: 0.9rem; color: #666;">
+Generative Reference Sequences — Part of the Universal Symbolic Interface (USI) Foundations Repository.
+</p>
+</footer>
+
+</body>
+</html>
