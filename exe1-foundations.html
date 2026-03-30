@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executable Foundations</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 140px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        h1 {
+            font-weight: 300;
+            font-size: 42px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .description {
+            font-size: 20px;
+            color: #cccccc;
+            font-weight: 300;
+            margin-bottom: 60px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        .section-title {
+            font-size: 26px;
+            font-weight: 300;
+            margin-top: 60px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+        .section-text {
+            font-size: 18px;
+            color: #cccccc;
+            font-weight: 300;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        a.download-link {
+            display: inline-block;
+            font-size: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 10px 0 40px 0;
+            border-bottom: 1px solid #555;
+            padding-bottom: 3px;
+        }
+        a.download-link:hover {
+            border-bottom-color: #ffffff;
+        }
+        a.block-link {
+            display: block;
+            font-size: 22px;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 60px auto 0 auto;
+            border-bottom: 1px solid #555;
+            padding-bottom: 4px;
+            width: fit-content;
+        }
+        a.block-link:hover {
+            border-bottom-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
 
+        <h1>Executable Foundations</h1>
+
+        <div class="description">
+            The first runnable expressions of the USI architecture. These artifacts instantiate the COP substrate,
+            the USI symbolic layer, and a canonical COP trajectory as executable Python systems.
+        </div>
+
+        <!-- USI/COP Seed -->
+        <div class="section-title">USI/COP Seed (Python)</div>
+        <div class="section-text">
+            The minimal living organism of the architecture. Implements COP states, operators, invariants,
+            transition rules, USI-Units, binding vectors, resolution levels, and sequence validators.
+            This seed forms the substrate on which all higher-level generativity operates.
+        </div>
+        <a class="download-link" href="USI-COP-SEED.pdf" download>Download USI/COP Seed →</a>
+
+        <!-- Pre-Collapse Rescue -->
+        <div class="section-title">Pre‑Collapse Rescue Trajectory (Python)</div>
+        <div class="section-text">
+            A canonical COP sequence implemented as an executable trajectory. Demonstrates invariant‑preserving
+            recovery from drift toward collapse: S2/S3 → S5 → S6 → S1/S3, with transition-types
+            Warning → Reframe → Stabilize/Inquire.
+        </div>
+        <a class="download-link" href="Pre-Collapse-Rescue-Harness.pdf" download>Download Pre‑Collapse Rescue →</a>
+
+        <!-- Back to Home -->
+        <a class="block-link" href="index.html">← Back to Home</a>
+
+    </div>
+</body>
+</html>
